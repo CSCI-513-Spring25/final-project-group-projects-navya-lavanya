@@ -1,0 +1,151 @@
+/* === GAMEBOARD GLOWING FUTURISTIC THEME === */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #000013, #001f33);
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(0, 10, 20, 0.8);
+  box-shadow: 0 0 30px #00f0ff, inset 0 0 10px #004d66;
+  backdrop-filter: blur(6px);
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 30px #00f0ff, inset 0 0 10px #004d66; }
+  50% { box-shadow: 0 0 50px #00f0ff, inset 0 0 15px #00bcd4; }
+  100% { box-shadow: 0 0 30px #00f0ff, inset 0 0 10px #004d66; }
+}
+
+.row {
+  display: flex;
+}
+
+.tile {
+  width: 42px;
+  height: 42px;
+  image-rendering: pixelated;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00eaff;
+}
+
+.logs {
+  background: rgba(0, 0, 0, 0.85);
+  color: #39ff14;
+  padding: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  min-width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-left: 4px solid #00ff99;
+  box-shadow: 0 0 10px #00ffcc;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #00ffe0;
+  font-size: 1.6rem;
+  text-shadow: 0 0 5px #00ffee;
+}
+
+.alert-log {
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+  color: #aaffee;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  background: rgba(0, 255, 255, 0.05);
+  border-left: 3px solid #00eaff;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.alert-log:hover {
+  background: rgba(0, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logs {
+    margin-top: 20px;
+    max-width: 90vw;
+  }
+
+  .tile {
+    width: 34px;
+    height: 34px;
+  }
+}
+.settings-gear {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ffe0;
+  border: 2px solid #00f0ff;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.settings-gear:hover {
+  transform: scale(1.2);
+}
+
+.settings-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: rgba(0, 10, 20, 0.9);
+  border: 2px solid #00ff99;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 20px #00ffe0;
+  z-index: 1000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  color: #00ffe0;
+}
+
+.setting-item input[type="range"] {
+  width: 100%;
+  accent-color: #00eaff;
+}
+
+.setting-item input[type="checkbox"] {
+  transform: scale(1.5);
+}
