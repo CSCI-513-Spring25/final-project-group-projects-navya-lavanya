@@ -37,15 +37,24 @@ Frontend (React + TypeScript):
 
 5)Created a story-driven experience where visual feedback, character movement, and tile effects aligned with the gameplay logic and level progression.
 
+Task Load :                                          
+NavyaSree : 
 
-Lavanya :                                   NavyaSree : 
+FactoryDesignPattern
+StartegyDesignPattern
+CompositeDesignPattern
+Front-end - Story context
+UMLs
+Sequence diagram
+Test-Case-OceanGrid
 
-SingletonPattern                            FactoryDesignPattern
-DecoratorPattern                            StartegyDesignPattern
-Observer Pattern                            CompositeDesignPattern
-Front-end , UI                              Front-end - Story context
-Test -case - GameStateTest                  UMLs
-PPT                                         Sequence diagram
-Documentation                               Test-Case-OceanGrid
-                                  
+Lavanya :                                   
+
+SingletonPattern                            
+DecoratorPattern                            
+Observer Pattern                            
+Front-end , UI                              
+Test -case - GameStateTest                  
+PPT                                         
+Documentation 
                                
